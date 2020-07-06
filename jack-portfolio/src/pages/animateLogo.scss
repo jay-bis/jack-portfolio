@@ -1,0 +1,122 @@
+@mixin step4( $width, $color, $bgcolor ) {
+    box-shadow:
+      $width 0 $bgcolor,
+      -$width 0 $bgcolor,
+      0 (-$width) $bgcolor,
+      0 $width $bgcolor,
+      2*$width 0 $bgcolor,
+      -2*$width 0 $bgcolor,
+      0 (-2*$width) $bgcolor,
+      0 2*$width $bgcolor, 
+      0 0 0 $width $bgcolor,
+      3*$width 0 $bgcolor,
+      -3*$width 0 $bgcolor, 
+      0 3*$width $bgcolor,
+      0 (-3*$width) $bgcolor,
+      0 (-$width) 0 $width $bgcolor,
+      0 $width 0 $width $bgcolor,
+      $width 0 0 $width $bgcolor,
+      -$width 0 0 $width $bgcolor,
+      4*$width 0 $color, 
+      -4*$width 0 $color,
+      0 (-4*$width) $color, 
+      0 4*$width $color,
+      2*$width 0 0 $width $color,
+      -2*$width 0 0 $width $color,
+      0 2*$width 0 $width $color,
+      0 (-2*$width) 0 $width $color,
+      0 0 0 2*$width $color;
+      margin: 4*$width auto;
+  }
+
+.prof-pic {
+   object-fit: contain;
+   width: 100%;
+   height: auto;
+}
+
+.prof-pic-lvl4 {
+    @include step4( 5px, #fea49f, #00a0a0 );
+}
+
+.prof-pic-container {
+    height: 400px;
+    width: 400px;
+    z-index: 9000;
+}
+
+.clss-2 {
+    animation: fadeIn 1.25s ease-in-out both;
+    animation-delay: 1.5s;
+}
+
+.clss-1 {
+    animation: fromTop 1.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fromTop {
+    0% {
+        transform: translateY(-150%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes floating {
+    from { transform: translate(0px,  0px); }
+    65%  { transform: translate(5px, 10px); }
+    to   { transform: translate(0px, -0px); }    
+}
+
+.floating {
+    animation: floating 3s infinite ease-in-out;
+}
+
+.flux1 {
+    font-size: 5vw;
+    margin-bottom: 10px;
+    margin-top: 0;
+    text-align: center;
+    animation: flux1 15s linear forwards;
+}
+
+.flux2 {
+    font-size: 5vw;
+    margin-top: 10px;
+    text-align: center;
+    animation: flux2 15s linear forwards;
+}
+  
+  @keyframes flux1 {
+    0%,
+    100% {
+      text-shadow: 0 0 1vw #00a0a0, 0 0 3vw #00a0a0, 0 0 10vw #00a0a0, 0 0 10vw #00a0a0, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+      color: #28D7FE;
+    }
+    50% {
+      text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
+      color: #146C80;
+    }
+  }
+
+  @keyframes flux2 {
+    0%,
+    100% {
+      text-shadow: 0 0 1vw #f87871, 0 0 3vw #f87871, 0 0 10vw #f87871, 0 0 10vw #f87871, 0 0 .4vw #ff55e8, .5vw .5vw .1vw #e48ad5;
+      color: #fea49f;
+    }
+    50% {
+      text-shadow: 0 0 .5vw #862279, 0 0 1.5vw #862279, 0 0 5vw #862279, 0 0 5vw #862279, 0 0 .2vw #862279, .5vw .5vw .1vw #9840a0;
+      color: #9c48cc;
+    }
+  }

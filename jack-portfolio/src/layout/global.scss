@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'arcadeclassic';
+    src: url('../../static/fonts/arcadeclassic-webfont.woff2') format('woff2'),
+         url('../../static/fonts/arcadeclassic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "RegularNoir";
+  
+    src: url("../../static/fonts/Noirregular.otf") format("opentype"), /* Open Type Font */
+      url("../../static/fonts/Noirregular.ttf") format("truetype"), /* Safari, Android, iOS */
+      url("../../static/fonts/Noirregular.woff") format("woff"), /* Modern Browsers */
+      url("../../static/fonts/Noirregular.woff2") format("woff2"); /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, a {
+    font-family: 'arcadeclassic';
+    color: white;
+}
+
+div, h3, h4, h5, h6 {
+    font-family: "RegularNoir";
+    color: white;
+}
+
+body {
+    margin: 0 20px !important;
+}

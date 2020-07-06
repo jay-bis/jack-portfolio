@@ -1,0 +1,27 @@
+.horizontal-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.h1-container {
+    margin: 0;
+}
+
+.vertical-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 650px;
+}
+
+a {
+    margin: 5px;
+    text-decoration: none;
+    color: inherit;
+    font-size: 19px;
+}
+
+a:hover {
+    color: #00a0a0;
+}
