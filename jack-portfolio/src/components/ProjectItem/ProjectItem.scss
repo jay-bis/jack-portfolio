@@ -1,0 +1,47 @@
+@mixin step4( $width, $color, $bgcolor ) {
+    box-shadow:
+      $width 0 $bgcolor,
+      -$width 0 $bgcolor,
+      0 (-$width) $bgcolor,
+      0 $width $bgcolor,
+      2*$width 0 $bgcolor,
+      -2*$width 0 $bgcolor,
+      0 (-2*$width) $bgcolor,
+      0 2*$width $bgcolor, 
+      0 0 0 $width $bgcolor,
+      3*$width 0 $bgcolor,
+      -3*$width 0 $bgcolor, 
+      0 3*$width $bgcolor,
+      0 (-3*$width) $bgcolor,
+      0 (-$width) 0 $width $bgcolor,
+      0 $width 0 $width $bgcolor,
+      $width 0 0 $width $bgcolor,
+      -$width 0 0 $width $bgcolor,
+      4*$width 0 $color, 
+      -4*$width 0 $color,
+      0 (-4*$width) $color, 
+      0 4*$width $color,
+      2*$width 0 0 $width $color,
+      -2*$width 0 0 $width $color,
+      0 2*$width 0 $width $color,
+      0 (-2*$width) 0 $width $color,
+      0 0 0 2*$width $color;
+      // margin: 4*$width auto;
+}
+
+.proj-item-lvl4 {
+    @include step4( 3px, #fea49f, #00a0a0 );
+    background-color: #00a0a0;
+}
+
+.proj-pic {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+    border-radius: 5%;
+}
+
+.proj-pic-container {
+    width: 500px;
+    z-index: 9000;
+}

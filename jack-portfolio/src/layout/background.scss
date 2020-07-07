@@ -1,8 +1,8 @@
   // n is number of stars required
 @function multiple-box-shadow ($n) {
-  $value: '#{random(2000)}px #{random(2000)}px #FFF';
+  $value: '#{random(3000)}px #{random(3000)}px #FFF';
   @for $i from 2 through $n {
-    $value: '#{$value} , #{random(2000)}px #{random(2000)}px #FFF'
+    $value: '#{$value} , #{random(3000)}px #{random(3000)}px #FFF'
   }
   @return unquote($value)
 }
@@ -12,7 +12,7 @@ $shadows-medium: multiple-box-shadow(200);
 $shadows-big:    multiple-box-shadow(100);
   
 html {
-    height: 2000px;
+    height: 3000px;
     background: radial-gradient(ellipse at bottom, #1B2735 0%, #101357 100%);
     overflow-y: scroll;
 }
@@ -27,7 +27,7 @@ html {
   &:after {
     content: " ";
     position: absolute;
-    top: 2000px;
+    top: 3000px;
     width: 1px;
     height: 1px;
     background: transparent;
@@ -44,7 +44,7 @@ html {
   &:after {
     content: " ";
     position: absolute;
-    top: 2000px;
+    top: 3000px;
     width: 2px;
     height: 2px;
     background: transparent;
@@ -61,7 +61,7 @@ html {
   &:after {
     content: " ";
     position: absolute;
-    top: 2000px;
+    top: 3000px;
     width: 3px;
     height: 3px;
     background: transparent;
@@ -74,6 +74,6 @@ html {
       transform: translateY(0px)
     }
     to	{
-      transform: translateY(-2000px)
+      transform: translateY(-3000px)
     }
   }
