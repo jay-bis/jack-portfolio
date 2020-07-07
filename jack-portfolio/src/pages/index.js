@@ -100,7 +100,7 @@ export default function Home() {
           <h1 className="flux2" style={{ marginBottom: '75px' }}>
             ...And More (on GitHub!)
           </h1>
-          <div className="horizontal-container">
+          <div style={{ alignItems: 'baseline' }} className="horizontal-container">
             <div className="vertical-container icon-container">
               <img className="icon" src={book} alt="book" />
               <a href="https://www.wattpad.com/user/jbiscupski" className="spacing" target="_blank" rel="noopener noreferrer">Writing Portfolio</a>
@@ -109,7 +109,7 @@ export default function Home() {
               <img className="icon" src={music} alt="music" />
               <a href="https://www.bandlab.com/jbiscupski" className="spacing" target="_blank" rel="noopener noreferrer">Music Portfolio</a>
             </div>
-            <div style={{ alignItems: 'baseline' }}className="vertical-container icon-container">
+            <div className="vertical-container icon-container">
               <img className="icon" src={github} alt="github icon" />
               <a href="https://github.com/jay-bis" className="spacing" target="_blank" rel="noopener noreferrer">Code Portfolio</a>
             </div>

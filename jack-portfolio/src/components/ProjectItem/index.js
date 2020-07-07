@@ -5,7 +5,7 @@ import './ProjectItem.scss';
 export default function ProjectItem(props) {
     return (
         <div className="proj-item-lvl4 proj-pic-container">
-            <img className="proj-pic" src={props.imgPath} />
+            <img className="proj-pic" src={props.imgPath} alt="project"/>
         </div>
     );
 }
