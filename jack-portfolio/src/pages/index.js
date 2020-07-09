@@ -33,7 +33,7 @@ export default function Home() {
                 this website was built with React, GatsbyJS, and SCSS! I also have a strong interest in data visualization, data engineering,
                 machine learning, IoT, the environment, and the intersection between all of the above. Besides my career interests, some of
                 my hobbies include writing short stories and poetry, learning to play guitar and writing my own songs, cycling, mountain biking,
-                rocking climbing, hiking, and camping. If you need a website built, want to collaborate on any type of tech project, or would
+                rock climbing, hiking, and camping. If you need a website built, want to collaborate on any type of tech project, or would
                 just like to chat, feel free to contact me at any of the links under my picture! 
               </h3>
               <Logo className="floating" />
