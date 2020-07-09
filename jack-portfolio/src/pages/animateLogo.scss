@@ -1,48 +1,12 @@
-@mixin step4( $width, $color, $bgcolor ) {
-    box-shadow:
-      $width 0 $bgcolor,
-      -$width 0 $bgcolor,
-      0 (-$width) $bgcolor,
-      0 $width $bgcolor,
-      2*$width 0 $bgcolor,
-      -2*$width 0 $bgcolor,
-      0 (-2*$width) $bgcolor,
-      0 2*$width $bgcolor, 
-      0 0 0 $width $bgcolor,
-      3*$width 0 $bgcolor,
-      -3*$width 0 $bgcolor, 
-      0 3*$width $bgcolor,
-      0 (-3*$width) $bgcolor,
-      0 (-$width) 0 $width $bgcolor,
-      0 $width 0 $width $bgcolor,
-      $width 0 0 $width $bgcolor,
-      -$width 0 0 $width $bgcolor,
-      4*$width 0 $color, 
-      -4*$width 0 $color,
-      0 (-4*$width) $color, 
-      0 4*$width $color,
-      2*$width 0 0 $width $color,
-      -2*$width 0 0 $width $color,
-      0 2*$width 0 $width $color,
-      0 (-2*$width) 0 $width $color,
-      0 0 0 2*$width $color;
-      margin: 4*$width auto;
-  }
+$medium: 768px;
 
-.prof-pic {
-   object-fit: contain;
-   width: 100%;
-   height: auto;
-}
-
-.prof-pic-lvl4 {
-    @include step4( 5px, #fea49f, #00a0a0 );
-}
-
-.prof-pic-container {
-    height: 400px;
-    width: 400px;
-    z-index: 9000;
+@media screen and (max-width: $medium) {
+    h1[class*="flux"] {
+      font-size: 35px;
+    }
+    h1.phone-margin {
+      margin-top: 30px;
+    }
 }
 
 .clss-2 {

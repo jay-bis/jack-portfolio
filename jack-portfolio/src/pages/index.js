@@ -49,10 +49,10 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <h1 className="flux1" style={{ marginBottom: '75px' }}>
+          <h1 className="flux1 phone-margin" style={{ marginBottom: '75px' }}>
             Portfolio
           </h1>
-          <div className="horizontal-container-left">
+          <div className="horizontal-container-left mobile-horz-container">
             <div className="vertical-container">
               <ProjectItem imgPath={codePic}/>
               <a className="spacing" target="_blank" rel="noopener noreferrer" href="https://github.com/jay-bis/jack-portfolio">This Website!</a>
@@ -65,12 +65,15 @@ export default function Home() {
               Had a bit too much fun doodling out possible designs for my logo while developing.
               <div className="empty-container" />
               Styled components held a cold, hard grip on me going into this project, but SCSS proved itself very worthwhile while tinkering with the background of the site.
-              <div className="empty-container" />
-              Next up: media queries :)
             </h3>
           </div>
-          <div className="horizontal-container-right">
-            <h3 className="proj-desc-container-right">
+
+          <div className="horizontal-container-left mobile-horz-container">
+            <div className="vertical-container">
+              <ProjectItem imgPath={chiPic} />
+              <a className="spacing" target="_blank" rel="noopener noreferrer" href="https://github.com/jay-bis/nba-viz">NBA   Visualizations</a>
+            </div>
+            <h3 className="proj-desc-container-left">
               My first foray into any backend development intertwined with data visualizations.
               <div className="empty-container" />
               A project that combined a few of my passions - data viz, web development, and basketball!
@@ -79,12 +82,9 @@ export default function Home() {
               <div className="empty-container" />
               No, seriously. Name a court and a time, and I'll be there. Bring your ankle braces.
             </h3>
-            <div className="vertical-container">
-              <ProjectItem imgPath={chiPic} />
-              <a className="spacing" target="_blank" rel="noopener noreferrer" href="https://github.com/jay-bis/nba-viz">NBA   Visualizations</a>
-            </div>
           </div>
-          <div className="horizontal-container-left">
+
+          <div className="horizontal-container-left mobile-horz-container">
             <div className="vertical-container">
               <ProjectItem imgPath={coronaPic} />
               <a className="spacing" target="_blank" rel="noopener noreferrer" href="https://github.com/jay-bis/future-covid-data">CoronaVision</a>
@@ -97,10 +97,10 @@ export default function Home() {
               It was taxing getting everything developed and deployed in two days, but ultimately very fulfulling.
             </h3>
           </div>
-          <h1 className="flux2" style={{ marginBottom: '75px' }}>
+          <h1 className="flux2 phone-margin" style={{ marginBottom: '75px' }}>
             ...And More (on GitHub!)
           </h1>
-          <div style={{ alignItems: 'baseline' }} className="horizontal-container">
+          <div style={{ alignItems: 'baseline' }} className="horizontal-container mobile-horz-flex-container">
             <div className="vertical-container icon-container">
               <img className="icon" src={book} alt="book" />
               <a href="https://www.wattpad.com/user/jbiscupski" className="spacing" target="_blank" rel="noopener noreferrer">Writing Portfolio</a>

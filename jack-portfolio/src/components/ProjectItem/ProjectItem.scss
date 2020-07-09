@@ -1,3 +1,12 @@
+$medium: 768px;
+
+// phones with tiny screens up to medium screens
+@media screen and (max-width: $medium) {
+    div.proj-pic-container {
+        width: 60vw;
+    }
+}
+
 @mixin step4( $width, $color, $bgcolor ) {
     box-shadow:
       $width 0 $bgcolor,
