@@ -1,3 +1,45 @@
+$small: 600px;
+$medium: 768px;
+
+// phones with tiny screens up to medium screens
+@media screen and (max-width: $medium) {
+
+    div.horizontal-container {
+        display: block;
+        text-align: center;
+    }
+    div.div.mobile-horz-container {
+        display: block;
+        text-align: center;
+    }
+    div [class*="horizontal-container-"] {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+    div [class*="vertical-container"] {
+        display: block;
+        margin-left: inherit;
+        //max-width: 80%;
+    }
+    div.prof-pic-container {
+        width: 60vw;
+        height: 60vw;
+    }
+    a.spacing {
+        display: block;
+        margin-bottom: 15px;
+    }
+    h3[class*="proj-desc-"] {
+        margin: 0;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    div.mobile-horz-flex-container {
+        display: flex;
+    }
+}
+
 .horizontal-container {
     display: flex;
     flex-direction: row;
@@ -74,4 +116,51 @@ a.spacing {
 
 a:hover {
     color: #00a0a0;
+}
+
+@mixin step4( $width, $color, $bgcolor ) {
+    box-shadow:
+      $width 0 $bgcolor,
+      -$width 0 $bgcolor,
+      0 (-$width) $bgcolor,
+      0 $width $bgcolor,
+      2*$width 0 $bgcolor,
+      -2*$width 0 $bgcolor,
+      0 (-2*$width) $bgcolor,
+      0 2*$width $bgcolor, 
+      0 0 0 $width $bgcolor,
+      3*$width 0 $bgcolor,
+      -3*$width 0 $bgcolor, 
+      0 3*$width $bgcolor,
+      0 (-3*$width) $bgcolor,
+      0 (-$width) 0 $width $bgcolor,
+      0 $width 0 $width $bgcolor,
+      $width 0 0 $width $bgcolor,
+      -$width 0 0 $width $bgcolor,
+      4*$width 0 $color, 
+      -4*$width 0 $color,
+      0 (-4*$width) $color, 
+      0 4*$width $color,
+      2*$width 0 0 $width $color,
+      -2*$width 0 0 $width $color,
+      0 2*$width 0 $width $color,
+      0 (-2*$width) 0 $width $color,
+      0 0 0 2*$width $color;
+      margin: 4*$width auto;
+  }
+
+.prof-pic {
+   object-fit: contain;
+   width: 100%;
+   height: auto;
+}
+
+.prof-pic-lvl4 {
+    @include step4( 5px, #fea49f, #00a0a0 );
+}
+
+.prof-pic-container {
+    height: 400px;
+    width: 400px;
+    z-index: 9000;
 }
